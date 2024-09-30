@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UserSecretsId>0c292d34-8c54-4997-b1cf-1b75fc554218</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	</PropertyGroup>
+
+	<ItemGroup>
+
+		<Compile Include="WeatherForecast.fs" />
+
+		<Compile Include="Models\TaskStatus.fs" />
+		<Compile Include="Models\Task.fs" />
+		<Compile Include="Data\TodoContext.fs" />
+		<Compile Include="Controllers\TasksController.fs" />
+		<Compile Include="Controllers\WeatherForecastController.fs" />
+		<Compile Include="Startup.fs" />
+		<Compile Include="Program.fs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="Dockerfile" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.32" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.32">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.32" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.32">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.8.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.8.0" />
+	</ItemGroup>
+
+</Project>
